@@ -27,75 +27,75 @@ int main()
 
 		switch (ReadNumber())
 		{
-		case 1:
-		{
-			cout << "Enter the position of the array whose element you want to delete ->\t";
-			int index = ReadNumber();
-			DeleteElement(array, index);
-			break;
-		}
-		case 2:
-		{
-			cout << "Element ->\t" << endl;
-			int number = ReadNumber();
-			InsertByIndex(array, 0, number);
-			break;
-		}
-		case 3:
-		{
-			cout << "Element ->\t" << endl;
-			int number = ReadNumber();
-			InsertByIndex(array, array->Length, number);
-			break;
-		}
-		case 4:
-		{
-			cout << "Index ->\t" << endl;
-			int index = ReadNumber();
-			cout << "Element ->\t" << endl;
-			int number = ReadNumber();
-			InsertByIndex(array, index + 1, number);
-			break;
-		}
-		case 5:
-		{
-			Sorting(array);
-			break;
-		}
-		case 6:
-		{
-			cout << "Element ->\t" << endl;
-			int number = ReadNumber();
-			int index;
-			if (!LineSearch(array, number, index))
+			case 1:
 			{
-				cout << "Element not found!" << endl;
+				cout << "Enter the position of the array whose element you want to delete ->\t";
+				int index = ReadNumber();
+				DeleteElement(array, index);
+				break;
 			}
-			else
+			case 2:
 			{
-				cout << "Index of element found ->\t" << index << endl;
+				cout << "Element ->\t" << endl;
+				int number = ReadNumber();
+				InsertByIndex(array, 0, number);
+				break;
 			}
-			system("pause");
-			break;
-		}
-		case 7:
-		{
-			Sorting(array);
-			ShowArray(array);
-			cout << "Element ->\t" << endl;;
-			int number = ReadNumber();
-			int index;
-			if (!BinarySearch(array, number, index))
+			case 3:
 			{
-				cout << "Element not found!" << endl;
+				cout << "Element ->\t" << endl;
+				int number = ReadNumber();
+				InsertByIndex(array, array->Length, number);
+				break;
 			}
-			else
+			case 4:
 			{
-				cout << "Index of element found ->\t" << index << endl;
+				cout << "Index ->\t" << endl;
+				int index = ReadNumber();
+				cout << "Element ->\t" << endl;
+				int number = ReadNumber();
+				InsertByIndex(array, index + 1, number);
+				break;
 			}
-			system("pause");
-			break;
-		}
+			case 5:
+			{
+				Sorting(array);
+				break;
+			}
+			case 6:
+			{
+				cout << "Element ->\t" << endl;
+				int number = ReadNumber();
+				int index;
+				if (!LineSearch(array, number, index))
+				{
+					cout << "Element not found!" << endl;
+				}
+				else
+				{
+					cout << "Index of element found ->\t" << index << endl;
+				}
+				system("pause");
+				break;
+			}
+			case 7:
+			{
+				Sorting(array);
+				ShowArray(array);
+				cout << "Element ->\t" << endl;;
+				int number = ReadNumber();
+				int index;
+				if (!BinarySearch(array, number, index))
+				{
+					cout << "Element not found!" << endl;
+				}
+				else
+				{
+					cout << "Index of element found ->\t" << index << endl;
+				}
+				system("pause");
+				break;
+			}
 		default:
 			break;
 		}

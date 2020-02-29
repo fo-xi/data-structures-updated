@@ -29,80 +29,80 @@ int main()
 
 		switch (ReadNumber())
 		{
-		case 1:
-		{
-			cout << "Amount of elements ->\t";
-			int quantity = ReadNumber();
-			AddingRandomNumbers(list, quantity);
-			ShowList(list);
-			break;
-		}
-		case 2:
-		{
-			cout << "Index ->\t";
-			int index = ReadNumber();
-			RemoveFromList(list, index);
-			ShowList(list);
-			break;
-		}
-		case 3:
-		{
-			cout << "Value ->\t";
-			int value = ReadNumber();
-			InsertToList(list, 0, value);
-			ShowList(list);
-			break;
-		}
-		case 4:
-		{
-			cout << "Value ->\t";
-			int value = ReadNumber();
-			InsertToList(list, list->Size, value);
-			ShowList(list);
-			break;
-		}
-		case 5:
-		{
-			cout << "Index ->\t";
-			int index = ReadNumber();
-			cout << "Value ->\t";
-			int value = ReadNumber();
-			InsertToList(list, index, value);
-			ShowList(list);
-			break;
-		}
-		case 6:
-		{
-			cout << "Index ->\t";
-			int index = ReadNumber();
-			cout << "Value ->\t";
-			int value = ReadNumber();
-			InsertToList(list, index + 1, value);
-			ShowList(list);
-			break;
-		}
-		case 7:
-		{
-			SortingList(list);
-			ShowList(list);
-			break;
-		}
-		case 8:
-		{
-			cout << "Value ->\t";
-			int value = ReadNumber();
-			int index;
-			if (!LineSearch(list, value, index))
+			case 1:
 			{
-				cout << "Value not found!" << endl;
+				cout << "Amount of elements ->\t";
+				int quantity = ReadNumber();
+				AddingRandomNumbers(list, quantity);
+				ShowList(list);
+				break;
 			}
-			else
+			case 2:
 			{
-				cout << "Index of found value ->\t" << index << endl;
+				cout << "Index ->\t";
+				int index = ReadNumber();
+				RemoveFromList(list, index);
+				ShowList(list);
+				break;
 			}
-			system("pause");
-			break;
-		}
+			case 3:
+			{
+				cout << "Value ->\t";
+				int value = ReadNumber();
+				InsertToList(list, 0, value);
+				ShowList(list);
+				break;
+			}
+			case 4:
+			{
+				cout << "Value ->\t";
+				int value = ReadNumber();
+				InsertToList(list, list->Size, value);
+				ShowList(list);
+				break;
+			}
+			case 5:
+			{
+				cout << "Index ->\t";
+				int index = ReadNumber();
+				cout << "Value ->\t";
+				int value = ReadNumber();
+				InsertToList(list, index, value);
+				ShowList(list);
+				break;
+			}
+			case 6:
+			{
+				cout << "Index ->\t";
+				int index = ReadNumber();
+				cout << "Value ->\t";
+				int value = ReadNumber();
+				InsertToList(list, index + 1, value);
+				ShowList(list);
+				break;
+			}
+			case 7:
+			{
+				SortingList(list);
+				ShowList(list);
+				break;
+			}
+			case 8:
+			{
+				cout << "Value ->\t";
+				int value = ReadNumber();
+				int index;
+				if (!LineSearch(list, value, index))
+				{
+					cout << "Value not found!" << endl;
+				}
+				else
+				{
+					cout << "Index of found value ->\t" << index << endl;
+				}
+				system("pause");
+				break;
+			}
 		default:
 			break;
 		}
